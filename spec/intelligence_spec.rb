@@ -26,7 +26,7 @@ describe AppAnnie::Intelligence do
         before { allow(AppAnnie).to receive(:connection).and_return(stub_connection) }
 
         it 'should return results' do
-          expect(AppAnnie::Intelligence.top_app_charts(options)).to be_an(Array)
+          expect(AppAnnie::Intelligence.top_app_charts(options)['list']).to be_an(Array)
         end
       end
     end

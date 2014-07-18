@@ -22,7 +22,7 @@ module AppAnnie
       end
 
       if response.status == 200
-        JSON.parse(response.body)['list']
+        JSON.parse(response.body)
       else
         ErrorResponse.raise_for(response)
       end
