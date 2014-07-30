@@ -19,6 +19,11 @@ And then execute:
 
 First, set your AppAnnie API key. You can do this via the `APPANNIE_API_KEY` environment variable, or by setting `AppAnnie.api_key`
 
+Manually make an api request with `AppAnnie.get`. Useful for getting meta info urls like `/v1.1/meta/countries`
+```ruby
+AppAnnie.get(url, params = {})
+```
+
 ### Intelligence API
 
 (after setting your api key)

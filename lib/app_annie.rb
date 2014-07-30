@@ -38,6 +38,14 @@ module AppAnnie
     end
   end
 
+  def self.get(url, params = {})
+    connection.get do |req|
+      req.headers['Authorization'] = "Bearer #{AppAnnie.api_key}"
+      req.url url
+      req.params = params
+    end
+  end
+
   class Unauthorized < Exception; end
   class RateLimitExceeded < Exception; end
   class ServerError < Exception; end
